@@ -23,8 +23,8 @@ def parse_args():
 args = parse_args()
 
 try:
-    API_ID = os.environ["api_id"]
-    API_KEY = os.environ["api_key"]
+    API_ID = os.environ["VERACODE_API_KEY_ID"]
+    API_KEY = os.environ["VERACODE_API_KEY_SECRET"]
 except KeyError:
     raise EnvironmentError("Missing Veracode API credentials in environment variables: 'api_id' and/or 'api_key'")
 
